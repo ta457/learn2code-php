@@ -5,10 +5,9 @@
     <?php require 'partials/header.php'; ?>
 
     <!-- ------code goes here------ -->
-    <?php echo $_SESSION['user']['email'];?>
-
-
-
+    <?php if(isset($_SESSION['user'])) {
+      echo $_SESSION['user']['email'];
+    }?>
   </div>
 </body>
 </html>
