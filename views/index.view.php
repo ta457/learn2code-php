@@ -6,7 +6,7 @@
 
     <!-- ------code goes here------ -->
     <?php if(isset($_SESSION['user'])) {
-      echo $_SESSION['user']['email'];
+      echo 'Welcome' . $_SESSION['user']['email'];
     }?>
   </div>
 </body>

@@ -1,6 +1,7 @@
-<?php
-
+<?php 
 require_once(base_path('models/UserModel.php'));
+
+$alert = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -12,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   if ($user) {
     $alert = 'Invalid email';
+
   } else {
     $userModel->addUser([
       'email' => $_POST['email'],
@@ -19,12 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       'name' => $_POST['name']
     ]);
 
-    $_SESSION['user'] = [
-      'email' => $email
-    ];
-
-    header('location: /');
-    exit();
+    $alert = 'Sign up successfully. You can login now.';
   }
 }
 
