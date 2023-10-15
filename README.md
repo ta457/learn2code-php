@@ -5,6 +5,7 @@ Hướng dẫn cài đặt project:
 1. Cài Laragon
 
 2. Mở Laragon, mở Terminal gõ "git clone git@github.com:ta457/learn2code-php.git" để clone repo về máy
+
 Hoặc cách khác là vào https://github.com/ta457/learn2code-php, bấm nút Code, chọn Download zip
 Giải nén file zip vừa tải về sẽ được một folder learn2code-php-main và một file learn2code.sql
 Copy folder learn2code-php-main vào C:\laragon\www
