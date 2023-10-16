@@ -1,28 +1,28 @@
 <?php require 'partials/head.php' ?>
 <body>
   <?php require 'partials/nav.php'; ?>
+  <?php require 'partials/header.php'; ?>
   <div class="main">
-    <?php require 'partials/header.php'; ?>
     
     <!-- ------code goes here------ -->
+    <div class="container">
+      <form method="POST">
+        <div><label for="email">Email: </label></div>
+        <input type="email" name="email" id="email" required>
 
-    <form method="POST">
-      <div><label for="email">Email: </label></div>
-      <input type="email" name="email" id="email" required>
+        <div><label for="password">Password: </label></div>
+        <input type="password" name="password" id="password" required>
 
-      <div><label for="password">Password: </label></div>
-      <input type="password" name="password" id="password" required>
+        <div><label for="email">Name: </label></div>
+        <input type="text" name="name" id="name" required>
 
-      <div><label for="email">Name: </label></div>
-      <input type="text" name="name" id="name" required>
+        <div>
+          <button type="submit">Sign up</button>
+        </div>
 
-      <div>
-        <button type="submit">Sign up</button>
-      </div>
-
-      <h2 class="alert"><?php echo $alert; ?></h2>
-    </form>
-
+        <h2 class="alert"><?php echo $alert; ?></h2>
+      </form>
+    </div>
   </div>
 </body>
 </html>

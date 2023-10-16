@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once(base_path('models/UserModel.php'));
 
 $alert = '';
@@ -18,9 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
     
     $_SESSION['user'] = [
-      'email' => $_POST['email']
+      'email' => $user['email'],
+      'role' => $user['role_id']
     ];
-    //dd($_SESSION['user']['email']);
+    //dd($user);
 
     header('location: /');
     exit();
@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 view("login.view.php", [
-  'header' => 'Login',
+  'header' => 'Log in',
   'alert' => $alert
 ]);

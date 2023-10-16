@@ -9,10 +9,11 @@ class UserModel extends Model {
   }
 
   public function findUser($conditions) {
-    return parent::find('users', $conditions);
+    return parent::findRecord('users', $conditions);
   }
 
   public function addUser($data) {
     parent::add('users', $data);
   }
+
 }

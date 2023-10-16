@@ -1,11 +1,10 @@
 <?php require 'partials/head.php' ?>
 <body>
   <?php require 'partials/nav.php'; ?>
+  <?php require 'partials/header.php'; ?>
   <div class="main">
-    <?php require 'partials/header.php'; ?>
-    
     <!-- ------code goes here------ -->
-
+    
 
 
     

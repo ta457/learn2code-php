@@ -14,7 +14,11 @@ class Model {
     return $this->db->query("SELECT * FROM $table")->findAll();
   }
 
-  public function find($table, $array = []) {
+  public function getColumn($column, $table) {
+    return $this->db->query("SELECT $column FROM $table")->findAll();
+  }
+
+  public function findRecord($table, $array = []) {
     $query = "SELECT * FROM $table WHERE ";
     $conditions = [];
     foreach ($array as $key => $value) {

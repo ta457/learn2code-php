@@ -26,7 +26,12 @@
 }
 
 .main {
-  padding: 10px 20vw;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.container {
+  grid-column-start: 2;
 }
 
 .alert {
