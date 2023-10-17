@@ -10,6 +10,10 @@ class Model {
     $this->db = new Database($config['database']);
   }
 
+  public function get($query) {
+    return $this->db->query($query)->find();
+  }
+
   public function getAll($table) {
     return $this->db->query("SELECT * FROM $table")->findAll();
   }
@@ -32,6 +36,38 @@ class Model {
     $keys = implode(', ', array_keys($array));
     $values = "'" . implode("', '", $array) . "'";
     $query = "INSERT INTO $table ($keys) VALUES ($values)";
+    $this->db->query($query);
+  }
+
+  public function update($table, $columns = [], $values = [], $conditions) {
+    if (count($columns) !== count($values)) {
+        throw new Exception("Number of columns and values must be the same");
+    }
+
+    $query = "UPDATE {$table} SET ";
+    
+    $setPairs = [];
+    for ($i = 0; $i < count($columns); $i++) {
+        $setPairs[] = "{$columns[$i]} = '{$values[$i]}'";
+    }
+
+    $query .= implode(', ', $setPairs);
+    if ($conditions) {
+        $query .= " WHERE {$conditions}";
+    }
+
+    $this->db->query($query);
+  }
+
+  public function delete($table, $conditions) {
+    $query = "DELETE FROM {$table}";
+    if (!empty($conditions)) {
+        $wherePairs = [];
+        foreach ($conditions as $column => $value) {
+            $wherePairs[] = "{$column} = '{$value}'";
+        }
+        $query .= " WHERE " . implode(' AND ', $wherePairs);
+    }
     $this->db->query($query);
   }
 }

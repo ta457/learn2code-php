@@ -1,25 +1,35 @@
 <?php require 'partials/head.php' ?>
 <body>
   <?php require 'partials/nav.php'; ?>
-  <?php require 'partials/header.php'; ?>
+
   <div class="main">
     
     <!-- ------code goes here------ -->
-    <div class="container">
+    <div class="container loginContainer">
       <form method="POST">
-        <div><label for="email">Email: </label></div>
-        <input type="email" name="email" id="email" required>
+        <div class="loginBox">
+          <?php require 'partials/header.php'; ?>
 
-        <div><label for="password">Password: </label></div>
-        <input type="password" name="password" id="password" required>
-        
-        <div>
-          <button type="submit">Log in</button>
+          <div class="row">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+          </div>
+
+          <div class="row">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          
+          <div class="row">
+            <button class="normalBtn" type="submit">Log in</button>
+          </div>
+
+          <h2 class="alert"><?php echo $alert; ?></h2>
+          
         </div>
-
-        <h2 class="alert"><?php echo $alert; ?></h2>
       </form>
     </div>
+    
   </div>
 </body>
 </html>

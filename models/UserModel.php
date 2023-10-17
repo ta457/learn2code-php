@@ -16,4 +16,5 @@ class UserModel extends Model {
     parent::add('users', $data);
   }
 
+
 }

@@ -19,5 +19,30 @@ function view($path, $attributes = []) {
 }
 
 function urlIs($value) {
-  return $_SERVER['REQUEST_URI'] == $value;
+  if($_SERVER['REQUEST_URI'] == $value) {
+    return true;
+  } else if ( '/' . explode('/', $_SERVER['REQUEST_URI'])[1] == $value) {
+    return true;
+  } else if ( '/' . explode('/', $_SERVER['REQUEST_URI'])[1] .'/'. explode('/', $_SERVER['REQUEST_URI'])[2] == $value) {
+    return true;
+  } else {
+    return false;
+  }
+  //return $_SERVER['REQUEST_URI'] == $value;
+}
+
+function dynamicNavItem($url) {
+  $selected = '';
+  if(urlIs($url)) {
+    $selected = 'selectedNav';
+  }
+  return $selected;
+}
+
+function dynamicSidebarItem($url) {
+  $selected = '';
+  if(urlIs($url)) {
+    $selected = 'selectedSide';
+  }
+  return $selected;
 }

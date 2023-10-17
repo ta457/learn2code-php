@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       'name' => $_POST['name']
     ]);
     
-    $alert = 'Sign up successfully. You can login now.';
+    $alert = 'Sign up successfully';
   }
 }
 
