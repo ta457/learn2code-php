@@ -14,9 +14,10 @@ Copy **learn2code-php-main** vào C:\laragon\www
 
 4. Mở Terminal, gõ:
 cd learn*
+composer install
 php -S localhost:8000
 
-5. Mở trình duyệt, vào localhost:8000
+6. Mở trình duyệt, vào localhost:8000
 
 Hướng dẫn làm việc:
 
