@@ -5,7 +5,8 @@ require base_path('vendor/autoload.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-function sendEmail() {
+
+function sendEmail($recipient) {
   $mail = new PHPMailer(true);
   try {
     //Server settings
@@ -20,8 +21,8 @@ function sendEmail() {
 
     //Recipients
     $mail->setFrom('priconne45703@gmail.com', 'Learn2Code');
-    $mail->addAddress('nganhtu04597@gmail.com', 'User');     //Add a recipient
-    $mail->addAddress('nganhtu04597@gmail.com');               //Name is optional
+    $mail->addAddress($recipient, 'User');     //Add a recipient
+    $mail->addAddress($recipient);               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
@@ -32,14 +33,14 @@ function sendEmail() {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Welcome to Learn2Code';
+    $mail->Body    = '<b>Do not reply to this email!</b>';
+    $mail->AltBody = 'You can now login to your account.';
 
     $mail->send();
-    echo 'Message has been sent';
+    //echo 'Message has been sent';
   } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 }
 
@@ -62,7 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       'password' => $_POST['password'],
       'name' => $_POST['name']
     ]);
-    
+
+    sendEmail($_POST['email']);
+
     $alert = 'Sign up successfully';
   }
 }

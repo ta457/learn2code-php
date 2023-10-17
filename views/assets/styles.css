@@ -25,6 +25,10 @@
   --light-blue-w3: #96d4d4;
 }
 
+.hidden {
+  display: none !important;
+}
+
 body {
   background-color: var(--base-bg);
 }
@@ -230,29 +234,29 @@ body {
   gap: 30px;
 }
 
-.row > div {
+.loginBox .row > div {
   display: flex;
   justify-content: space-between;
 }
 
-.row > div p,
-.row > div strong {
+.loginBox .row > div p,
+.loginBox .row > div strong {
   font-size: 0.9em;
 }
 
-.row > div strong {
+.loginBox .row > div strong {
   color: var(--normal-btn);
   cursor: pointer;
 }
 
-.row > input {
+.loginBox .row > input {
   min-width: 350px;
   font-size: 1em;
   padding: 8px 10px;
   margin-top: 5px;
 }
 
-.row button {
+.loginBox .row button {
   width: 100%;
   padding: 10px !important;
   font-size: 1em;
@@ -268,14 +272,42 @@ hr {
   border-color: var(--item-highlight);
 }
 .basicInfo {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 1fr;
 }
+
 .basicInfo > img {
   width: 200px; 
   height: 200px;
 }
-.basicInfo > .info {
+.basicInfo > .info > h2 {
+  margin: 20px 0 40px 0;
+} 
+.info > h2,
+.info .contact {
+  padding-left: 20px;
+}
+.info .contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 0;
+}
+.info .contact > a {
+  color: var(--normal-btn);
+}
+
+.info button {
+  height: fit-content;
+}
+
+.editInfo strong {
+  display: flex; align-items: center;
+}
+
+.editInfo input {
+  font-size: 1em;
+  padding: 3px 5px;
+  margin-left: 10px;
 }
 
 /* ==========================HOME============================================= */

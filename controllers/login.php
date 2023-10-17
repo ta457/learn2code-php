@@ -18,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
     
     $_SESSION['user'] = [
+      'id' => $user['user_id'],
       'email' => $user['email'],
+      'name' => $user['name'],
       'role' => $user['role_id']
     ];
     header('location: /');

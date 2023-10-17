@@ -63,3 +63,10 @@ function validatePassword($password) {
 function validateEmail($email) {
   return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }
+
+function makeLink($link) {
+  if (strpos($link, 'https://') !== 0) {
+      $link = 'https://' . $link;
+  }
+  return $link;
+}
