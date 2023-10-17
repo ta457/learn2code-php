@@ -16,7 +16,7 @@
   --red-btn-hover: #f43f5e;
 
   /* home page ================= */
-  --green-w3: #059862;
+  --green-w3: #0369a1;
   --light-green-w3: #d9eee1;
   --white-green-w3: #d9eee1;
   --yellow-w3: #fff4a3;
@@ -428,7 +428,7 @@ header {
   height: 2.75rem;
 }
 .input-outline {
-  background-color: #059862;
+  background-color: var(--green-w3);
   padding: 8px 39px 8px 39px;
   height: 100%;
   border-top-right-radius: 40px;
@@ -639,7 +639,7 @@ footer {
   box-shadow: none;
   border: none;
   font-weight: 600;
-  background-color: #059862 !important;
+  background-color: var(--green-w3) !important;
   color: white !important;
 }
 
@@ -690,7 +690,7 @@ footer {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  background-color: #059862 !important;
+  background-color: var(--green-w3) !important;
   color: white !important;
 }
 

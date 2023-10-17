@@ -4,17 +4,17 @@
   <?php require 'partials/nav.php'; ?>
   <section class="search">
     <div class="search-bar">
-      <h1 class="">Learn to Code</h1>
-      <h2 class="">Cung cấp kiến thức cơ bản về lập trình.</h2>
+      <h1 class="">Learn2Code</h1>
+      <h2 class="">Ctrl+Z Your Way to Coding Greatness.</h2>
       <div class="bar-input">
-        <input class="outline-none ml-2 mr-2 hover:not-italic font-bold w-96 h-11" type="search" placeholder="Tìm kiếm khóa học, ví dụ: HTML" />
+        <input class="outline-none ml-2 mr-2 hover:not-italic font-bold w-96 h-11" type="search" placeholder="Search our tutorials, e.g. HTML" />
         <div class="input-outline">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
       <a href="#!">
         <h3 class="bar-outline mt-5 mb-5 text-white w-full">
-          Gợi ý khóa học
+          Not sure where to begin?
         </h3>
       </a>
     </div>
@@ -41,26 +41,28 @@
   <section class="score">
     <div class="score-container">
       <div class="container-header">
-        <h2>Tiến trình học</h2>
-        <p>Giúp bạn theo dõi quá trình học tập với hệ thống đánh giá bằng điểm số.</p>
-        <p>Hãy đăng nhập và bắt đầu tích điểm!</p>
+        <h2>Track your progress</h2>
+        <p>We are always tracking you, even in your sleep.</p>
+        <br>
+        <p>Log in to your account, and start coding now! Or else...</p>
+        <br>
       </div>
       <img src="/views/home-asset/img/myl-green-off.png" />
-      <button>Đăng ký miễn phí</button>
+      <button>Sign Up for Free</button>
     </div>
   </section>
   <section class="exercise">
     <div class="exercise-flex">
       <div class="flex-header">
-        <h2>Khóa học và bài tập</h2>
-        <p>Nơi bạn học và ứng dụng</p>
+        <h2>Exercises and Quizzes</h2>
+        <p>Test your skill!</p>
       </div>
       <div class="flex-body">
         <a href="#!" class="body-box ex-background">
-          <div>Khóa học</div>
+          <div>Exercises</div>
         </a>
         <a href="#!" class="body-box qui-background">
-          <div>Bài luyện tập</div>
+          <div>Quizzes</div>
         </a>
       </div>
     </div>
@@ -78,7 +80,7 @@
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/8a2b31a7f1.js" crossorigin="anonymous"></script>
-  <script src="/views/script.js"></script>
+  <script src="/views/home-asset/script.js"></script>
 </body>
 
 </html>

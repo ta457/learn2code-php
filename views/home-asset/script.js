@@ -12,28 +12,28 @@ const dataLang = [
 const dataTopLang = [
   {
     name: "HTML",
-    title: "Ngôn ngữ xây dựng trang web",
+    title: "The language for building web pages",
     backgroundColor: "background-color: var(--light-blue-w3)",
     color: "color: white !important;",
     filePath: "html.jpg",
   },
   {
     name: "CSS",
-    title: "Ngôn ngữ giúp trang trí cho trang web của bạn",
+    title: "The language for styling web pages",
     backgroundColor: "background-color: var(--light-pink-w3)",
     color: "color: black;",
     filePath: "css.jpg",
   },
   {
     name: "JavaScript",
-    title: "Ngôn ngữ dành cho lập trình web",
+    title: "The language for programming web pages",
     backgroundColor: "background-color: var(--light-black-w3)",
     color: "color: white !important;",
     filePath: "js.jpg",
   },
   {
     name: "Python",
-    title: "Ngôn ngữ lập trình thông dụng nhất thế giới",
+    title: "A popular programming language",
     backgroundColor: "background-color: var(--yellow-w3)",
     color: "color: black;",
     filePath: "python.jpg",
@@ -57,7 +57,7 @@ const renderDataTopLangHTML = dataTopLang
           <div class="boxing-lang box-margin">
             <h2>${item.name}</h2>
             <p>${item.title}</p>
-            <button>Học ${item.name}</button>
+            <button>Learn ${item.name}</button>
           </div>
           <div class="boxing-example box-margin">
             <p>${item.name} Example</p>
