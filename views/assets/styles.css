@@ -267,13 +267,15 @@ hr {
   border: 1px solid;
   border-color: var(--item-highlight);
 }
-.profileImg {
+.basicInfo {
   display: flex;
-  justify-content: center; align-items: center;
+  gap: 20px;
 }
-.profileImg > img {
+.basicInfo > img {
   width: 200px; 
   height: 200px;
+}
+.basicInfo > .info {
 }
 
 /* ==========================HOME============================================= */

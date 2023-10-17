@@ -8,13 +8,18 @@
 
     <div class="container profileContainer">
 
-    <section class="profileImg">
+    <section class="basicInfo">
       <img src="/views/assets/svg/prf-default.svg" alt="prf">
+      <div class="info">
+        <p>Email: </p>
+        <p>Name: </p>
+        <p>Phone number: </p>
+        <p>Github: </p>
+      </div>
     </section>
     <hr>
-    <section class="info">
-      <p>Email: </p>
-      <p>Name: </p>
+    <section>
+      
     </section>
 
     </div>
