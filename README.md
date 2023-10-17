@@ -13,10 +13,14 @@ Copy **learn2code-php-main** vào C:\laragon\www
 3. Tại Laragon, chọn Database > Open > File > Run sql file > chọn **learn2code.sql**
 
 4. Mở Terminal, gõ:
+
 cd learn*
+
+composer install
+
 php -S localhost:8000
 
-5. Mở trình duyệt, vào localhost:8000
+6. Mở trình duyệt, vào localhost:8000
 
 Hướng dẫn làm việc:
 
