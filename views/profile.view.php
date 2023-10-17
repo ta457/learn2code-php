@@ -6,13 +6,18 @@
     
     <!-- ------code goes here------ -->
 
-    <div class="container">
-      <?php require 'partials/header.php'; ?>
+    <div class="container profileContainer">
 
+    <section class="profileImg">
+      <img src="/views/assets/svg/prf-default.svg" alt="prf">
+    </section>
+    <hr>
+    <section class="info">
+      <p>Email: </p>
+      <p>Name: </p>
+    </section>
 
     </div>
-
-    
   </div>
 </body>
 </html>

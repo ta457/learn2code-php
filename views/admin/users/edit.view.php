@@ -7,7 +7,7 @@
   <div class="main">
     <!-- ------code goes here------ -->
     <?php require __DIR__ . '/../../partials/admin-sidebar.php'; ?>
-    <div class="container">
+    <div class="container adminContainer">
       <?php require __DIR__ . '/../../partials/header.php'; ?>
       <h3><?= $subHeader ?></h3>
       <form action="" method="POST">
@@ -26,7 +26,8 @@
 
         <div class="tableCell">Edit user</div>
         <div class="tableCell">
-          <input type="text" 
+          <input style="color: gray;" 
+            type="text" 
             name="email" 
             id="email" 
             value="<?= $user['email']?>"
@@ -38,7 +39,7 @@
             type="text" 
             name="password" 
             id="password"
-            placeholder="<?= $user['password']?>"
+            value="<?= $user['password']?>"
           >
         </div>
         <div class="tableCell">
@@ -46,7 +47,7 @@
             type="text" 
             name="name" 
             id="name"
-            placeholder="<?= $user['name']?>"
+            value="<?= $user['name']?>"
           >
         </div>
         <div class="tableCell">
@@ -54,7 +55,7 @@
             type="text" 
             name="profile_img" 
             id="profile_img"
-            placeholder="<?= $user['profile_img']?>"
+            value="<?= $user['profile_img']?>"
           >
         </div>
         <div class="tableCell">
@@ -62,7 +63,7 @@
             type="text" 
             name="github" 
             id="github"
-            placeholder="<?= $user['github']?>"
+            value="<?= $user['github']?>"
           >
         </div>
         <div class="tableCell">
@@ -70,7 +71,7 @@
             type="text" 
             name="phone" 
             id="phone"
-            placeholder="<?= $user['phone']?>"
+            value="<?= $user['phone']?>"
           >
         </div>
         <div class="tableCell">

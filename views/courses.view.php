@@ -5,7 +5,7 @@
     
     <!-- ------code goes here------ -->
 
-    <div class="container">
+    <div class="container courseContainer">
       <?php require 'partials/header.php'; ?>
 
 

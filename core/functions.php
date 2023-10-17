@@ -46,3 +46,20 @@ function dynamicSidebarItem($url) {
   }
   return $selected;
 }
+
+function validatePassword($password) {
+  $requirements = [
+    '/[0-9]/',       // At least 1 number
+    '/[A-Z]/',       // At least 1 uppercase letter
+    '/.{8,}/'        // At least 8 characters long
+  ];
+  foreach ($requirements as $requirement) {
+    if (!preg_match($requirement, $password)) {
+        return false;
+    }
+  }
+  return true;
+}
+function validateEmail($email) {
+  return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}

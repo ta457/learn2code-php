@@ -11,12 +11,18 @@
           <?php require 'partials/header.php'; ?>
 
           <div class="row">
-            <label for="email">Email: </label>
+            <div>
+              <label for="email">Email: </label>
+              <p>Need an account? <a href="/signup"><strong>Sign up</strong></a></p>
+            </div>
             <input type="email" name="email" id="email" required>
           </div>
 
           <div class="row">
+          <div>
             <label for="password">Password: </label>
+              <strong id="showPw">Show</strong>
+            </div>
             <input type="password" name="password" id="password" required>
           </div>
           
@@ -24,12 +30,14 @@
             <button class="normalBtn" type="submit">Log in</button>
           </div>
 
-          <h2 class="alert"><?php echo $alert; ?></h2>
+          <p class="alert"><?php echo $alert; ?></p>
           
         </div>
       </form>
     </div>
     
   </div>
+
+  <script src="/views/assets/login.js"></script>
 </body>
 </html>

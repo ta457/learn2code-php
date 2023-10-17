@@ -51,10 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     'email' => $_POST['email']
   ]);
 
-  if ($user) {
-    $alert = 'Invalid email';
+  if ($user || !validatePassword($_POST['password']) || !validateEmail($_POST['email'])) {
+
+    $alert = 'Invalid email or password';
 
   } else {
+
     $userModel->addUser([
       'email' => $_POST['email'],
       'password' => $_POST['password'],

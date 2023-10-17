@@ -5,7 +5,7 @@
   <div class="main">
     <!-- ------code goes here------ -->
     <?php require __DIR__ . '/../../partials/admin-sidebar.php'; ?>
-    <div class="container">
+    <div class="container adminContainer">
       <?php require __DIR__ . '/../../partials/header.php'; ?>
       <h3><?= $subHeader ?></h3>
 
